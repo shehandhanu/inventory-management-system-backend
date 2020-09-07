@@ -1,7 +1,7 @@
 const Product = require('../models/products.model');
 const ErrorHandler = require('../utils/errorHandler');
 
-//Create New Product
+//Create New Product  => /api/v1/product
 exports.newProducts = async (req, res, next) => {
 
     const product = await Product.create(req.body);
@@ -12,7 +12,7 @@ exports.newProducts = async (req, res, next) => {
     })
 
 }
-//get all products  =>/api/v1/products?keyword=rose
+//Get All Products  => /api/v1/product
 exports.getProducts = async (req, res, next) => {
 
     const products = await Product.find();
@@ -24,11 +24,10 @@ exports.getProducts = async (req, res, next) => {
     })
 }
 
-//get single product =>/api/v1/product/:id
+//Get Single Product => /api/v1/product/:id
 exports.getSingleProduct = async (req, res, next) => {
 
     const product = await Product.findById(req.params.id);
-
     if (!product) {
         return next(new ErrorHandler('Product Not Found', 404))
     }
