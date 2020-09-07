@@ -1,4 +1,5 @@
 const Product = require('../models/products.model');
+const ErrorHandler = require('../utils/errorHandler');
 
 //Create New Product
 exports.newProducts = async (req, res, next) => {
