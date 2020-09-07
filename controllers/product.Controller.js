@@ -57,3 +57,5 @@ exports.updateProduct = async (req, res, next) => {
         product
     })
 }
+
+//Delete Products
