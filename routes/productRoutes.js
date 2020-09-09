@@ -6,6 +6,7 @@ const { newProducts,
     getProducts,
     getSingleProduct,
     updateProduct } = require('../controllers/product.Controller');
+
 //Add Product
 router.route('/product').post(newProducts);
 //Get All Products
