@@ -15,7 +15,7 @@ router.route('/product').get(getProducts);
 router.route('/product/:id').get(getSingleProduct);
 //Update Product
 router.route('/product/:id').put(updateProduct);
-//Delete Product
+//Delete Product by ID
 router.route('/product/:id').delete(updateProduct);
 
 
